@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import heroVideo from "../../assets/videos/hero.MOV";
+// import heroVideo from "../../assets/videos/hero.MOV";
 import { ArrowDown } from "lucide-react";
 
 export function Hero() {

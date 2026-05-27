@@ -1,12 +1,12 @@
 import { motion } from "motion/react";
 import { useInView } from "../hooks/useInView";
 
-import video1 from "../../assets/videos/echoes.MP4";
-import video2 from "../../assets/videos/hero.MOV";
-import video3 from "../../assets/videos/behind_lens.MP4";
-import video4 from "../../assets/videos/urban_stories.MP4";
-import video5 from "../../assets/videos/silent.MOV";
-import video6 from "../../assets/videos/rhythm.MP4";
+// import video1 from "../../assets/videos/echoes.MP4";
+// import video2 from "../../assets/videos/hero.MOV";
+// import video3 from "../../assets/videos/behind_lens.MP4";
+// import video4 from "../../assets/videos/urban_stories.MP4";
+// import video5 from "../../assets/videos/silent.MOV";
+// import video6 from "../../assets/videos/rhythm.MP4";
 
 const projects = [
   {
