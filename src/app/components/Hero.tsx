@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
-// import heroVideo from "../../assets/videos/hero.MOV";
 import { ArrowDown } from "lucide-react";
+
+const heroVideo =
+  "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904398/hero_zznbuw.mov";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -17,27 +19,29 @@ export function Hero() {
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Content */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 max-w-4xl text-center space-y-8 text-white"
+        className="relative z-20 max-w-4xl text-center space-y-8 text-white"
       >
         <h1 className="text-5xl md:text-7xl tracking-tight">
           Crafting Stories Through Vision
         </h1>
 
         <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto">
-          Professional video editor specializing in short films, music videos, and visual storytelling
+          Professional video editor specializing in short films, music videos,
+          and visual storytelling
         </p>
 
         <motion.button
@@ -47,6 +51,7 @@ export function Hero() {
           whileTap={{ scale: 0.98 }}
         >
           View My Work
+          <ArrowDown size={18} />
         </motion.button>
       </motion.div>
     </section>

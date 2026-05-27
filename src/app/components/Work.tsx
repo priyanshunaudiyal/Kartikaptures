@@ -1,13 +1,6 @@
 import { motion } from "motion/react";
 import { useInView } from "../hooks/useInView";
 
-// import video1 from "../../assets/videos/echoes.MP4";
-// import video2 from "../../assets/videos/hero.MOV";
-// import video3 from "../../assets/videos/behind_lens.MP4";
-// import video4 from "../../assets/videos/urban_stories.MP4";
-// import video5 from "../../assets/videos/silent.MOV";
-// import video6 from "../../assets/videos/rhythm.MP4";
-
 const projects = [
   {
     id: 1,
@@ -15,7 +8,8 @@ const projects = [
     category: "Short Film",
     description:
       "A contemplative exploration of memory and time through intimate character moments.",
-    video: video1,
+    video:
+      "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904507/echoes_qwadls.mov",
   },
   {
     id: 2,
@@ -23,7 +17,8 @@ const projects = [
     category: "Music Video",
     description:
       "High-energy visual storytelling synchronized with rhythm and emotion.",
-    video: video2,
+    video:
+      "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904398/hero_zznbuw.mov",
   },
   {
     id: 3,
@@ -31,7 +26,8 @@ const projects = [
     category: "Documentary",
     description:
       "An intimate look at creative process and artistic dedication.",
-    video: video3,
+    video:
+      "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904770/behind_lens_vkd1we.mp4",
   },
   {
     id: 4,
@@ -39,7 +35,8 @@ const projects = [
     category: "Commercial",
     description:
       "Dynamic brand storytelling through compelling visual narratives.",
-    video: video4,
+    video:
+      "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904463/urban_stories_vuve6t.mp4",
   },
   {
     id: 5,
@@ -47,7 +44,8 @@ const projects = [
     category: "Short Film",
     description:
       "Visual poetry exploring silence and stillness in modern life.",
-    video: video5,
+    video:
+      "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904334/silent_qimdud.mov",
   },
   {
     id: 6,
@@ -55,7 +53,8 @@ const projects = [
     category: "Music Video",
     description:
       "A celebration of movement and color in sync with sound.",
-    video: video6,
+    video:
+      "https://res.cloudinary.com/dbk2umnbj/video/upload/v1779904432/rhythm_lxyual.mov",
   },
 ];
 
@@ -65,6 +64,7 @@ export function Work() {
   return (
     <section id="work" className="px-6 py-24">
       <div className="max-w-7xl mx-auto">
+
         {/* Section Heading */}
         <motion.div
           ref={ref}
@@ -96,6 +96,7 @@ export function Work() {
               }}
               className="group"
             >
+
               {/* Video */}
               <div className="relative aspect-video overflow-hidden rounded-2xl bg-muted mb-4 shadow-lg">
                 <video
@@ -103,7 +104,7 @@ export function Work() {
                   muted
                   loop
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 >
                   <source src={project.video} type="video/mp4" />
@@ -124,9 +125,11 @@ export function Work() {
                   {project.description}
                 </p>
               </div>
+
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
