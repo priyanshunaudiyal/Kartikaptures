@@ -1,0 +1,16 @@
+# dependencies
+node_modules
+
+# production build
+dist
+
+# environment files
+.env
+
+# video files
+*.mp4
+*.mov
+*.MOV
+
+# optional mac files
+.DS_Store
